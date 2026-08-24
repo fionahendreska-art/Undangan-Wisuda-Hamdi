@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Undangan Wisuda</title>
+<style>
+body {
+    margin:0;
+    font-family: 'Segoe UI', sans-serif;
+    background:#000;
+    color:white;
+    text-align:center;
+}
+.container {
+    max-width:480px;
+    margin:auto;
+    background:#000;
+}
+.cover {
+    width:100%;
+    display:block;
+}
+.btn {
+    display:inline-block;
+    margin:25px auto;
+    padding:16px 30px;
+    background:linear-gradient(45deg,#f4c542,#b8860b);
+    color:#000;
+    font-weight:bold;
+    border-radius:50px;
+    text-decoration:none;
+    font-size:20px;
+    box-shadow:0 0 18px rgba(255,215,0,.5);
+}
+#videoSection {
+    display:none;
+    padding:20px;
+}
+video {
+    width:100%;
+    border-radius:16px;
+    box-shadow:0 0 20px rgba(255,215,0,.4);
+}
+</style>
+</head>
+<body>
+<div class="container">
+    <img src="GRADUATION.png" class="cover" alt="Undangan Wisuda">
+
+    <a href="#" class="btn" onclick="openInvitation(event)">
+        ✦ Buka Undangan ✦
+    </a>
+
+    <div id="videoSection">
+        <h2>Selamat Datang di Undangan Wisuda 🎓</h2>
+        <video id="wisudaVideo" controls playsinline>
+            <source src="GRADUATION (5).mp4" type="video/mp4">
+            Browser Anda tidak mendukung video.
+        </video>
+    </div>
+</div>
+
+<script>
+function openInvitation(e){
+    e.preventDefault();
+    document.getElementById("videoSection").style.display="block";
+    const video=document.getElementById("wisudaVideo");
+    video.scrollIntoView({behavior:"smooth"});
+    video.play();
+}
+</script>
+</body>
+</html>
